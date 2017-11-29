@@ -4,10 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if len(nums) == 0:
-            return 0
+        n = len(nums)
+        if n in [0, 1]:
+            return n
+
         i = 0
-        for j in range(1, len(nums)):
+        for j in range(1, n):
             if nums[j] > nums[i]:
                 i += 1
                 nums[i] = nums[j]
